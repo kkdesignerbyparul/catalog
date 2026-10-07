@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>DN Size Availability</title>
+
   <style>
     :root {
       --bg: #ffffff;
@@ -12,16 +13,6 @@
       --muted-bg: #eef2f6;
       --border: #cdd5de;
       --yes: #1a7f4b;
-    }
-
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #14181d;
-        --text: #e6ebf0;
-        --muted-bg: #1f262e;
-        --border: #36404b;
-        --yes: #4cc38a;
-      }
     }
 
     body {
@@ -62,33 +53,24 @@
       font-weight: 600;
     }
 
-    td img {
-      width: 40px;
-      height: 100px;
-      object-fit: contain;
+    /* Image cell */
+    td.img-cell {
+      padding: 0;
+      width: 160px;
+      height: 110px;
+    }
+
+    /* Image fills the cell without overflowing */
+    td.img-cell img {
       display: block;
-      margin: 0 auto;
+      width: 100%;
+      height: 110px;
+      object-fit: cover;
     }
 
     .yes {
       color: var(--yes);
       font-weight: 600;
-    }
-
-    td.img-cell {
-      padding: 0;
-    }
-
-    .img-box {
-      height: 110px;
-      overflow: hidden;
-    }
-
-    .img-box img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
     }
   </style>
 </head>
@@ -102,20 +84,37 @@
       <thead>
         <tr>
           <th>DN</th>
-          <th>image</th>
-          <th>color</th>
+          <th>Image</th>
+          <th>Color</th>
         </tr>
       </thead>
+
       <tbody>
-        <!-- Copy this row for each new entry. Put image files in an "images" folder. -->
-          <td><img src="images/1.jpeg" alt="DN 1"></td>
-          <td class="yes">Orange - 42/48<br /> Yellow-38/54<br />Peach-42/46</td>
+
+        <tr>
+          <td>1</td>
+
+          <td class="img-cell">
+            <img src="images/1.jpeg" alt="DN 1">
+          </td>
+
+          <td class="yes">
+            Orange - 42/48<br>
+            Yellow - 38/54<br>
+            Peach - 42/46
+          </td>
         </tr>
+
         <tr>
           <td>2</td>
-          <td class="img-cell"><img src="images/dn2.jpg" alt="DN 2"></td>
+
+          <td class="img-cell">
+            <img src="images/dn2.jpg" alt="DN 2">
+          </td>
+
           <td class="yes">Yes</td>
         </tr>
+
       </tbody>
     </table>
   </div>
