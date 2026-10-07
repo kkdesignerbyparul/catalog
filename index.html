@@ -64,13 +64,17 @@
       font-weight: 600;
     }
 	
-	td.img-cell {
+td.img-cell {
   padding: 0;
-  width: 160px;
-  height: 110px;
 }
 
-td.img-cell img {
+.img-box {
+  width: 160px;
+  height: 110px;
+  overflow: hidden;
+}
+
+.img-box img {
   display: block;
   width: 100%;
   height: 100%;
@@ -95,7 +99,12 @@ td.img-cell img {
         <!-- Copy this row for each new entry. Put image files in an "images" folder. -->
         <tr>
           <td>1</td>
-          <td class="img-cell"><img src="images/1.jpeg" alt="DN 1"></td>
+		  <td class="img-cell">
+  <div class="img-box">
+    <img src="images/1.jpg" alt="DN 1">
+  </div>
+</td>
+          <!--<td class="img-cell"><img src="images/1.jpeg" alt="DN 1"></td>-->
           <td class="yes">Orange - 42/48<br/> Yellow-38/54<br/>Peach-42/46</td>
           </tr>
         <tr>
