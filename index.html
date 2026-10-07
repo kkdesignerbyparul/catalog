@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DN Size Availability</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #1d2733;
+      --muted-bg: #eef2f6;
+      --border: #cdd5de;
+      --yes: #1a7f4b;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #14181d;
+        --text: #e6ebf0;
+        --muted-bg: #1f262e;
+        --border: #36404b;
+        --yes: #4cc38a;
+      }
+    }
+    body {
+      margin: 0;
+      padding: 2rem 1rem;
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+    h1 {
+      max-width: 960px;
+      margin: 0 auto 1.5rem;
+      font-size: 1.75rem;
+    }
+    .table-wrap {
+      max-width: 960px;
+      margin: 0 auto;
+      overflow-x: auto;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 0.75rem 1rem;
+      text-align: center;
+      white-space: nowrap;
+    }
+    th {
+      background: var(--muted-bg);
+      font-weight: 600;
+    }
+    td img {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto;
+    }
+    .yes {
+      color: var(--yes);
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>DN Size Availability</h1>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>DN</th>
+          <th>image</th>
+          <th>36 - Yes</th>
+          <th>38 - Yes</th>
+          <th>40 - Yes</th>
+          <th>50 - Yes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Copy this row for each new entry. Put image files in an "images" folder. -->
+        <tr>
+          <td>DN 1</td>
+          <td><img src="images/dn1.jpg" alt="DN 1"></td>
+          <td class="yes">Yes</td>
+          <td class="yes">Yes</td>
+          <td class="yes">Yes</td>
+          <td class="yes">Yes</td>
+        </tr>
+        <tr>
+          <td>DN 2</td>
+          <td><img src="images/dn2.jpg" alt="DN 2"></td>
+          <td class="yes">Yes</td>
+          <td class="yes">Yes</td>
+          <td class="yes">Yes</td>
+          <td class="yes">Yes</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</body>
+</html>
