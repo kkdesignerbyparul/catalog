@@ -1,123 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>DN Size Availability</title>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DN Size Availability Carousel</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://jsdelivr.net" rel="stylesheet">
   <style>
-    :root {
-      --bg: #ffffff;
-      --text: #1d2733;
-      --muted-bg: #eef2f6;
-      --border: #cdd5de;
-      --yes: #1a7f4b;
+    /* Ensures the carousel stays centered and contained */
+    .carousel-container {
+      max-width: 500px;
+      margin: 300px auto;
     }
-
-    body {
-      margin: 0;
-      padding: 2rem 1rem;
-      background: var(--bg);
-      color: var(--text);
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    /* Fixed height for image area to keep text aligned */
+    .carousel-img-wrapper {
+      height: 350px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #f8f9fa;
     }
-
-    h1 {
-      max-width: 960px;
-      margin: 0 auto 1.5rem;
-      font-size: 1.75rem;
+    .carousel-img-wrapper img {
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: contain;
     }
-
-    .table-wrap {
-      max-width: 960px;
-      margin: 0 auto;
-      overflow-x: auto;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-
-    th,
-    td {
-      border: 1px solid var(--border);
-      padding: 0.75rem 1rem;
+    /* Custom styling to keep the text clearly visible below the image */
+    .carousel-caption-below {
+      padding: 15px;
       text-align: center;
-      white-space: nowrap;
-    }
-
-    th {
-      background: var(--muted-bg);
-      font-weight: 600;
-    }
-
-    /* Image cell */
-    td.img-cell {
-      padding: 0;
-      max-width: 70px;
-    }
-
-    /* Image fills the cell without overflowing */
-    td.img-cell img {
-      display: block;
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-    }
-
-    .yes {
-      color: var(--yes);
-      font-weight: 600;
+      background: #ffffff;
+      color: #333333;
     }
   </style>
 </head>
-
 <body>
 
-  <h1>DN Size Availability</h1>
+<div class="container">
+  <div class="carousel-container shadow rounded overflow-hidden">
+    
+    <!-- Bootstrap Carousel (touch swiping enabled by default in BS5) -->
+    <div id="dnCarousel" class="carousel slide" data-bs-ride="false">
+      
+      <div class="carousel-inner">
+        
+        <!-- Item 1: DN 1 -->
+        <div class="carousel-item active">
+          <div class="carousel-img-wrapper">
+            <!-- Replace with your actual image path -->
+            <img src="path-to-dn1-image.jpg" class="d-block" alt="DN 1">
+          </div>
+          <div class="carousel-caption-below border-top">
+            <h5 class="fw-bold">DN 1</h5>
+            <p class="mb-1 text-muted"><strong>Available Colors & Sizes:</strong></p>
+            <span class="badge bg-warning text-dark me-1">Orange: 42/48</span>
+            <span class="badge bg-warning text-dark me-1">Yellow: 38/54</span>
+            <span class="badge bg-warning text-dark">Peach: 42/46</span>
+          </div>
+        </div>
 
-  <div class="table-wrap">
-    <table>
-      <thead>
-        <tr>
-          <th>DN</th>
-          <th>Image</th>
-          <th>Color</th>
-        </tr>
-      </thead>
+        <!-- Item 2: DN 2 -->
+        <div class="carousel-item">
+          <div class="carousel-img-wrapper">
+            <!-- Replace with your actual image path -->
+            <img src="path-to-dn2-image.jpg" class="d-block" alt="DN 2">
+          </div>
+          <div class="carousel-caption-below border-top">
+            <h5 class="fw-bold">DN 2</h5>
+            <p class="mb-1 text-muted"><strong>Availability:</strong> Available</p>
+          </div>
+        </div>
 
-      <tbody>
+      </div>
 
-        <tr>
-          <td>1</td>
-
-          <td class="img-cell">
-            <img src="images/1.jpeg" alt="DN 1">
-          </td>
-
-          <td class="yes">
-            Orange - 42/48<br>
-            Yellow - 38/54<br>
-            Peach - 42/46
-          </td>
-        </tr>
-
-        <tr>
-          <td>2</td>
-
-          <td class="img-cell">
-            <img src="images/dn2.jpg" alt="DN 2">
-          </td>
-
-          <td class="yes">Yes</td>
-        </tr>
-
-      </tbody>
-    </table>
+      <!-- Left and Right Controls (Visible arrows) -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#dnCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bg-dark rounded-circle" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#dnCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon bg-dark rounded-circle" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+      
+    </div>
+    
   </div>
+</div>
 
+<!-- Bootstrap 5 JS Bundle with Popper -->
+<script src="https://jsdelivr.net"></script>
 </body>
-
 </html>
