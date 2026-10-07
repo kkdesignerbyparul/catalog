@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DN Size Availability Carousel</title>
   <!-- Bootstrap 5 CSS -->
-  <link href="https://jsdelivr.net" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   <style>
     /* Ensures the carousel stays centered and contained */
     .carousel-container {
@@ -36,8 +37,12 @@
 </head>
 <body>
 
-<div class="container">
-  <div class="carousel-container shadow rounded overflow-hidden">
+<div class="container mt-3">
+  <!-- Use text-center utility and remove default bottom margins (mb-0) -->
+  <h1 class="text-center mb-0">DN Size Availability</h1>
+  
+  <!-- Changed margin from 'margin: 30px auto' to 'margin: 10px auto' -->
+  <div class="carousel-container shadow rounded overflow-hidden mt-2">
     
     <!-- Bootstrap Carousel (touch swiping enabled by default in BS5) -->
     <div id="dnCarousel" class="carousel slide" data-bs-ride="false">
@@ -48,7 +53,7 @@
         <div class="carousel-item active">
           <div class="carousel-img-wrapper">
             <!-- Replace with your actual image path -->
-            <img src="path-to-dn1-image.jpg" class="d-block" alt="DN 1">
+            <img src="images/1.jpeg" class="d-block" alt="DN 1">
           </div>
           <div class="carousel-caption-below border-top">
             <h5 class="fw-bold">DN 1</h5>
@@ -60,14 +65,17 @@
         </div>
 
         <!-- Item 2: DN 2 -->
-        <div class="carousel-item">
+        <div class="carousel-item active">
           <div class="carousel-img-wrapper">
             <!-- Replace with your actual image path -->
-            <img src="path-to-dn2-image.jpg" class="d-block" alt="DN 2">
+            <img src="images/2.jpeg" class="d-block" alt="DN 1">
           </div>
           <div class="carousel-caption-below border-top">
-            <h5 class="fw-bold">DN 2</h5>
-            <p class="mb-1 text-muted"><strong>Availability:</strong> Available</p>
+            <h5 class="fw-bold">DN 1</h5>
+            <p class="mb-1 text-muted"><strong>Available Colors & Sizes:</strong></p>
+            <span class="badge bg-warning text-dark me-1">Orange: 42/48</span>
+            <span class="badge bg-warning text-dark me-1">Yellow: 38/54</span>
+            <span class="badge bg-warning text-dark">Peach: 42/46</span>
           </div>
         </div>
 
@@ -89,6 +97,6 @@
 </div>
 
 <!-- Bootstrap 5 JS Bundle with Popper -->
-<script src="https://jsdelivr.net"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>

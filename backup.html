@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DN Size Availability</title>
+
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #1d2733;
+      --muted-bg: #eef2f6;
+      --border: #cdd5de;
+      --yes: #1a7f4b;
+    }
+
+    body {
+      margin: 0;
+      padding: 2rem 1rem;
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+
+    h1 {
+      max-width: 960px;
+      margin: 0 auto 1.5rem;
+      font-size: 1.75rem;
+    }
+
+    .table-wrap {
+      max-width: 960px;
+      margin: 0 auto;
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      border: 1px solid var(--border);
+      padding: 0.75rem 1rem;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    th {
+      background: var(--muted-bg);
+      font-weight: 600;
+    }
+
+    /* Image cell */
+    td.img-cell {
+      padding: 0;
+      max-width: 70px;
+    }
+
+    /* Image fills the cell without overflowing */
+    td.img-cell img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .yes {
+      color: var(--yes);
+      font-weight: 600;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>DN Size Availability</h1>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>DN</th>
+          <th>Image</th>
+          <th>Color</th>
+        </tr>
+      </thead>
+
+      <tbody>
+
+        <tr>
+          <td>1</td>
+
+          <td class="img-cell">
+            <img src="images/1.jpeg" alt="DN 1">
+          </td>
+
+          <td class="yes">
+            Orange - 42/48<br>
+            Yellow - 38/54<br>
+            Peach - 42/46
+          </td>
+        </tr>
+
+        <tr>
+          <td>2</td>
+
+          <td class="img-cell">
+            <img src="images/2.jpeg" alt="DN 2">
+          </td>
+
+          <td class="yes">Yes</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+</body>
+
+</html>
